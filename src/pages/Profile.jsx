@@ -4,9 +4,9 @@ export default function Profile() {
   const { user, logout } = useAuth();
 
   return (
-    <div className="h-full  bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center p-6">
+    <div className=" bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 flex items-center justify-center p-6">
       
-      <div className="bg-white shadow-2xl rounded-3xl overflow-hidden w-full max-w-md transition hover:scale-[1.02] duration-300">
+      <div className="bg-white shadow-2xl rounded-3xl  w-full">
         
         {/* Top Gradient Section */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 h-32 relative">

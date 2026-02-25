@@ -10,7 +10,7 @@ export default function Home() {
   // =========================
   if (!user) {
     return (
-      <div className="h-full  bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center text-white p-6">
+      <div className="main-content  bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center text-white p-6">
         <div className="text-center max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Welcome to Fire Auth 🚀
