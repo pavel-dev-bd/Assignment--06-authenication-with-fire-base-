@@ -15,7 +15,7 @@ import {
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("fireAuthUser")) || null);
   const [loading, setLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
@@ -105,6 +105,7 @@ export function AuthProvider({ children }) {
   // 🔹 Firebase Auth State Listener
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      localStorage.setItem("fireAuthUser", JSON.stringify(currentUser));
       setUser(currentUser);
       setLoading(false);
     });
